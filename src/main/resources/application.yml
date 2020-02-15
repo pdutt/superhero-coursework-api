@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: superhero-coursework-api
+  profiles:
+    active:
+      - insecure
+  security:
+    user:
+      name: user
+      password: password
