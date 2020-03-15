@@ -13,8 +13,15 @@ repositories {
 }
 
 dependencies {
+	implementation ('org.springframework.boot:spring-boot-starter-jdbc') {
+		exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
+	}
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.projectlombok:lombok'
+	compile ('com.zaxxer:HikariCP:2.7.9')
+	runtime('mysql:mysql-connector-java')
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.postgresql:postgresql'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

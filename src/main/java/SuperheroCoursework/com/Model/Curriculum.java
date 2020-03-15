@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Curriculum {
 
+    List<String> curriculumIds;
     String units;
     String gradeLevel;
     HashMap<String, Content> contentFinder;

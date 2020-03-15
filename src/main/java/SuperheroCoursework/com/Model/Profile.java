@@ -1,9 +1,14 @@
 package SuperheroCoursework.com.Model;
 
-import SuperheroCoursework.com.config.ProfileProperties;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor()
 public class Profile {
 
-    ProfileProperties profileProperties;
+    String firstName;
+    String lastName;
+    String profileId;
+    String role;
+    String access;
     CurriculumPlan curriculumPlan;
 }
