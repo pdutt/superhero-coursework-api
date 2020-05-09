@@ -1,14 +1,45 @@
 package SuperheroCoursework.com.Model;
 
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@NoArgsConstructor()
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Profile {
 
-    String firstName;
-    String lastName;
-    String profileId;
-    String role;
-    String access;
-    CurriculumPlan curriculumPlan;
+    private String firstName;
+    private String lastName;
+    private String profileId;
+    private String role;
+    private String access;
+    private int curriculumPlanId;
+
+    public Profile () { }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setProfileId (String profileId) {
+        this.profileId = profileId;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public void setAccess(String access) {
+        this.access = access;
+    }
+
+    public void setCurriculumPlanId (int curriculumPlanId) {
+        this.curriculumPlanId = curriculumPlanId;
+    }
+
 }

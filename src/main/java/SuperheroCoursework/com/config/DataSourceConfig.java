@@ -6,13 +6,10 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
@@ -21,9 +18,6 @@ import javax.sql.DataSource;
 @Slf4j
 @Data
 public class DataSourceConfig {
-
-    @Configuration
-    public class DataSourceConfiguration {
 
         @Autowired
         private Environment env;
@@ -37,7 +31,7 @@ public class DataSourceConfig {
             dataSource.setPassword(env.getProperty("spring.datasource.hikari.password"));
 
             return dataSource;
-        }
+
     }
 }
 
