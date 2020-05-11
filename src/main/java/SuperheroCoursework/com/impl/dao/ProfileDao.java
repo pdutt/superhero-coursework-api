@@ -1,41 +1,45 @@
 package SuperheroCoursework.com.impl.dao;
 
 import SuperheroCoursework.com.Model.Profile;
+import SuperheroCoursework.com.config.DataSourceConfig;
+import SuperheroCoursework.com.impl.mapper.ProfileMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.*;
 
+@Repository
+@Slf4j
 public class ProfileDao {
 
-    @Autowired
-    @Qualifier ("customDataSource")
-    private DataSource datasource;
+    String query = "SELECT * FROM PROFILE WHERE PROFILE_ID = ?";
 
-    String query = "SELECT * FROM PROFILE ";
+    //TODO: Make sure to modify connection to database using DataSourceConfig and Application properties
+    public Profile getProfile(String profileID) throws Exception {
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection connection = DriverManager.getConnection("jdbc:sqlserver://superheroserver.database.windows.net:1433;" +
+                    "database=superherodatabase-v1;user=superhero@superheroserver;password=!Luv5ugar2;encrypt=true;" +
+                    "trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            //Connection connection = DataSourceConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, profileID);
 
-    public Profile getProfile(String username, String password) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                        return ProfileMapper.mapRow(resultSet);
+                    }
+            } catch (Exception ex) {
+                throw new Exception ("Mapping Profile Unsuccessful");
+            }
+        } catch (SQLException e) {
+            throw new Exception("Could not connect to database.");
+        }
+
         return null;
     }
 
-    public String getProfileInfo(String uuid) throws SQLException {
-        datasource.getConnection().prepareStatement(query).execute();
-    }
-
-    public void mapProfile(String query) {
-        try (Connection connection = datasource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            // ... add parameters to the SQL query using PreparedStatement methods:
-            //     setInt, setString, etc.
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    return profileM
-                    // ... do something with result set
-                }
-            }
-        } catch (SQLException e) {
-            // ... handle SQL exception
-        }
-    }
 }

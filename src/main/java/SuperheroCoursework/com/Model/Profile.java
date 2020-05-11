@@ -42,4 +42,16 @@ public class Profile {
         this.curriculumPlanId = curriculumPlanId;
     }
 
+    public String getFirstName() { return firstName; }
+
+    public String getLastName() {return lastName; }
+
+    public String getProfileId() { return profileId; }
+
+    public String getRole() { return role; }
+
+    public String getAccess() { return access; }
+
+    public int getCurriculumPlanId() { return curriculumPlanId; }
+
 }

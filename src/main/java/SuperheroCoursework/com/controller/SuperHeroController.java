@@ -4,6 +4,8 @@ import SuperheroCoursework.com.Model.Profile;
 import SuperheroCoursework.com.service.ContentService;
 import SuperheroCoursework.com.service.CurriculumService;
 import SuperheroCoursework.com.service.ProfileService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,9 +32,10 @@ public class SuperHeroController {
     }
 
     @GetMapping("/profile")
-    public Profile getProfile(@RequestParam String username, @RequestParam String password){
+    public ResponseEntity<Profile> getProfile(@RequestParam String profileId) throws Exception {
 
-        return profileService.getProfile(username, password);
+        Profile profile = profileService.getProfile(profileId);
+        return new ResponseEntity<>(profile, HttpStatus.OK);
     }
 
     @GetMapping("/objectives")

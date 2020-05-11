@@ -18,6 +18,7 @@ dependencies {
 	}
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.projectlombok:lombok'
+
 	compile ('com.zaxxer:HikariCP:2.7.9')
 	runtime('mysql:mysql-connector-java')
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
