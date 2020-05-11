@@ -1,4 +1,4 @@
-package SuperheroCoursework.com.example.demo;
+package SuperheroCoursework.com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
