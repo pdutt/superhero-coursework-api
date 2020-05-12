@@ -1,6 +1,5 @@
 package SuperheroCoursework.com.service;
 
-import SuperheroCoursework.com.Model.Curriculum;
 import SuperheroCoursework.com.impl.dao.CurriculumDao;
 
 public class CurriculumService {

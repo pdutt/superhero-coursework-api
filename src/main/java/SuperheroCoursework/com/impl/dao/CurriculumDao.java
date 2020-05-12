@@ -1,6 +1,6 @@
 package SuperheroCoursework.com.impl.dao;
 
-import SuperheroCoursework.com.Model.Curriculum;
+import SuperheroCoursework.com.Model.Curriculum.Curriculum;
 
 public class CurriculumDao {
 
