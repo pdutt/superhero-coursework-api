@@ -1,5 +1,6 @@
 package SuperheroCoursework.com.impl.dao;
 
+
 import SuperheroCoursework.com.Model.Curriculum.Curriculum;
 
 public class CurriculumDao {
@@ -12,6 +13,20 @@ public class CurriculumDao {
        // TODO: use query and map values
         return null;
     }
+
+    public void getStorageConnection() {
+//        String connString = "DefaultEndpointsProtocol=https;AccountName=superherostorageaccount;AccountKey=6T91N9ce/z7KliRQZ3pOj5weAsgkmAO/RyS1UUGWlBpecFyY/BezKZfJx4K+FJZanfRI9mjcYcKcX9cwTFVyJw==;EndpointSuffix=core.windows.net";
+//// Parse the connection string and create a blob client to interact with Blob storage
+//        StorageSharedKeyCredential credential = new StorageSharedKeyCredential(accountName, accountKey);
+//        BlobServiceClient storageAccount = CloudStorageAccount.parse(connString);
+//        blobClient = storageAccount.createCloudBlobClient();
+//        container = blobClient.getContainerReference("suerherocoursework");
+//
+//// Create the container if it does not exist with public access.
+//        System.out.println("Creating container: " + container.getName());
+//        container.createIfNotExists(BlobContainerPublicAccessType.CONTAINER, new BlobRequestOptions(), new OperationContext());
+    }
+
 
     //example
     public String getObjectiveByName(String objectiveName) {
