@@ -17,9 +17,13 @@ repositories {
 	maven {
 		url "https://mvnrepository.com/artifact/com.microsoft.azure/azure-storage-blob"
 	}
+	maven {
+		url "https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc"
+	}
 }
 
 dependencies {
+
 	implementation ('org.springframework.boot:spring-boot-starter-jdbc') {
 		exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
 	}
@@ -28,6 +32,7 @@ dependencies {
 
 	compile group: 'com.microsoft.azure', name: 'azure-storage-spring-boot-starter', version: '2.2.4'
 	compile group: 'com.microsoft.azure', name: 'azure-storage-blob', version: '10.5.0'
+	compile('com.microsoft.sqlserver:mssql-jdbc')
 	compile ('com.zaxxer:HikariCP:2.7.9')
 	runtime('mysql:mysql-connector-java')
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
