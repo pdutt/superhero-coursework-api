@@ -14,6 +14,10 @@ public class CurriculumService {
 
     }
 
+    public void executeJson() throws Exception {
+        curriculumDao.ingestJson();
+    }
+
     public String findObjective(String objectiveName) {
         if (doesExist(objectiveName)) {
             //call dao layer and filter by content for certain objective

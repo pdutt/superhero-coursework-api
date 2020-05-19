@@ -36,7 +36,7 @@ public class DataSourceConfig {
             dataSource.setUrl(env.getProperty("spring.datasource.hikari.jdbc-url"));
             dataSource.setUsername(env.getProperty("spring.datasource.hikari.username"));
             dataSource.setPassword(env.getProperty("spring.datasource.hikari.password"));
-            dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("spring.datasource.hikari.driverClassName")));
+            //dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("spring.datasource.hikari.driverClassName")));
 
             return dataSource;
         }

@@ -8,12 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
-import javax.sql.DataSource;
 import java.sql.*;
+import javax.sql.DataSource;
+
 
 @Repository
 @Slf4j
 public class ProfileDao {
+
+    @Autowired
+    @Qualifier ("customDataSource")
+    private DataSource datasource;
 
     String query = "SELECT * FROM PROFILE WHERE PROFILE_ID = ?";
 
