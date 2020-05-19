@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
+
 @RestController
 @RequestMapping("/home")
 public class SuperHeroController {
@@ -41,6 +43,13 @@ public class SuperHeroController {
     @GetMapping("/objectives")
     public String getObjective(@RequestParam String objectiveName) {
         return curriculumService.findObjective(objectiveName);
+    }
+
+    @GetMapping("/curriculum")
+    public void getCurriculum(@RequestParam String curriculumId) throws Exception {
+        File f=new File("Curriculum_data.json");
+        String h = f.getAbsolutePath();
+        curriculumService.executeJson();
     }
 
 }

@@ -20,6 +20,9 @@ repositories {
 	maven {
 		url "https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc"
 	}
+	maven {
+		url "https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple"
+	}
 }
 
 dependencies {
@@ -31,7 +34,8 @@ dependencies {
 	implementation 'org.projectlombok:lombok'
 
 	compile group: 'com.microsoft.azure', name: 'azure-storage-spring-boot-starter', version: '2.2.4'
-	compile group: 'com.microsoft.azure', name: 'azure-storage-blob', version: '10.5.0'
+	compile group: 'com.microsoft.azure', name: 'azure-storage-blob', version: '11.0.0'
+	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 	compile('com.microsoft.sqlserver:mssql-jdbc')
 	compile ('com.zaxxer:HikariCP:2.7.9')
 	runtime('mysql:mysql-connector-java')
