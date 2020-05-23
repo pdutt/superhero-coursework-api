@@ -15,11 +15,32 @@ import lombok.*;
 @AllArgsConstructor
 public class Curriculum {
 
-    List<Module> modules = new ArrayList<Module>();
-    int curriculumId;
-    String units;
-    String gradeLevel;
-    HashMap<String, Content> contentFinder;
+    String curriculumId;
+    HashMap<String, Objective> objectives;
+
+    public Curriculum (){
+        this.objectives = new HashMap<>();
+    }
+
+    public Objective getObjective(String key) {
+        return objectives.get(key);
+    }
+
+    public void setObjective(String key, Objective value) {
+        objectives.put(key, value);
+    }
+
+    public HashMap<String, Objective> getObjectives() {
+        return objectives;
+    }
+
+    public void setCurriculumId (String curriculumId) {
+        this.curriculumId = curriculumId;
+    }
+
+    public String getCurriculumId() {
+        return curriculumId;
+    }
 
 
 }
