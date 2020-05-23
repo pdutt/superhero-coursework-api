@@ -36,26 +36,20 @@ public class CurriculumDao {
             Map curriculumObj = JsonObject;
             Iterator<Map.Entry> itr1 = curriculumObj.entrySet().iterator();
 
-            Set<String> keySet = JsonObject.keySet();
-           Iterator<String> itr = keySet.iterator();
-
             while (itr1.hasNext()) {
-                String curriculumTopics = itr.next();
                 Map.Entry header = itr1.next();
 
-                if (curriculumTopics.equals(CurriculumConstants.CURRICULUM_ID)) {
+                if (header.getKey().equals(CurriculumConstants.CURRICULUM_ID)) {
                     curriculum.setCurriculumId(header.getValue().toString());
                 }
                 else {
-
-                    System.out.println(curriculumTopics + "; ");
                     JSONObject transferObj = (JSONObject) JsonObject.get(header.getKey().toString());
                     Map transfer = ((Map) JsonObject.get(header.getKey().toString()));
 
                     objective = new Objective();
 
                     setJsonValues(transferObj, transfer);
-                    curriculum.setObjective(curriculumTopics, objective);
+                    curriculum.setObjective(header.getKey().toString(), objective);
                 }
             }
             return curriculum;
