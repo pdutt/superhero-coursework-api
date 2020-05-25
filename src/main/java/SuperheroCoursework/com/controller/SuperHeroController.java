@@ -1,5 +1,6 @@
 package SuperheroCoursework.com.controller;
 
+import SuperheroCoursework.com.Model.Curriculum.Curriculum;
 import SuperheroCoursework.com.Model.Profile;
 import SuperheroCoursework.com.service.ContentService;
 import SuperheroCoursework.com.service.CurriculumService;
@@ -46,10 +47,11 @@ public class SuperHeroController {
     }
 
     @GetMapping("/curriculum")
-    public void getCurriculum(@RequestParam String curriculumId) throws Exception {
+    public ResponseEntity<Curriculum> getCurriculum(@RequestParam String curriculumId) throws Exception {
         File f=new File("Curriculum_data.json");
         String h = f.getAbsolutePath();
-        curriculumService.executeJson();
+        return new ResponseEntity<>(curriculumService.getCurriculum(), HttpStatus.OK);
+
     }
 
 }

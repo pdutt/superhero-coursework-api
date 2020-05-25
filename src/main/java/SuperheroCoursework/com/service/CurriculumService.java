@@ -1,5 +1,6 @@
 package SuperheroCoursework.com.service;
 
+import SuperheroCoursework.com.Model.Curriculum.Curriculum;
 import SuperheroCoursework.com.impl.dao.CurriculumDao;
 
 public class CurriculumService {
@@ -14,8 +15,11 @@ public class CurriculumService {
 
     }
 
-    public void executeJson() throws Exception {
-        curriculumDao.ingestJson();
+    public Curriculum getCurriculum () throws Exception {
+        return executeJson();
+    }
+    public Curriculum executeJson() throws Exception {
+        return curriculumDao.ingestJson();
     }
 
     public String findObjective(String objectiveName) {
