@@ -26,9 +26,7 @@ public class ProfileDao {
     public Profile getProfile(String profileID) throws Exception {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager.getConnection("jdbc:sqlserver://superheroserver.database.windows.net:1433;" +
-                    "database=superherodatabase-v1;user=superhero@superheroserver;password=!Luv5ugar2;encrypt=true;" +
-                    "trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            Connection connection = DriverManager.getConnection("");
             //Connection connection = DataSourceConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, profileID);

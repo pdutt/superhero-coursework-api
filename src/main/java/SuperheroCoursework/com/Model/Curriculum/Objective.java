@@ -1,8 +1,14 @@
 package SuperheroCoursework.com.Model.Curriculum;
 
-import java.util.HashMap;
-import java.util.Map;
+import lombok.*;
 
+import java.util.HashMap;
+
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Objective {
 
     public HashMap<String, Module> modules;

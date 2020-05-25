@@ -4,7 +4,6 @@ import SuperheroCoursework.com.Model.Content;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import lombok.*;
 
