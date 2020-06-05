@@ -2,6 +2,8 @@ package SuperheroCoursework.com.service;
 
 import SuperheroCoursework.com.Model.Curriculum.Curriculum;
 import SuperheroCoursework.com.impl.dao.CurriculumDao;
+import net.minidev.json.JSONObject;
+import org.json.simple.JSONArray;
 
 public class CurriculumService {
 
@@ -16,10 +18,14 @@ public class CurriculumService {
     }
 
     public Curriculum getCurriculum () throws Exception {
-        return executeJson();
-    }
-    public Curriculum executeJson() throws Exception {
         return curriculumDao.ingestJson();
+    }
+
+    public JSONArray getCurriculumJson() throws Exception {
+        JSONObject obj = curriculumDao.getCurriculumJson();
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.add(obj);
+        return jsonArray;
     }
 
     public String findObjective(String objectiveName) {

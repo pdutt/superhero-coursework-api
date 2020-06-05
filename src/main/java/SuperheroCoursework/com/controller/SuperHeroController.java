@@ -5,12 +5,10 @@ import SuperheroCoursework.com.Model.Profile;
 import SuperheroCoursework.com.service.ContentService;
 import SuperheroCoursework.com.service.CurriculumService;
 import SuperheroCoursework.com.service.ProfileService;
+import org.json.simple.JSONArray;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 
@@ -51,6 +49,15 @@ public class SuperHeroController {
         File f=new File("Curriculum_data.json");
         String h = f.getAbsolutePath();
         return new ResponseEntity<>(curriculumService.getCurriculum(), HttpStatus.OK);
+
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/curriculum/json")
+    public JSONArray getCurriculumJson() throws Exception {
+        File f=new File("Curriculum_data.json");
+        String h = f.getAbsolutePath();
+        return curriculumService.getCurriculumJson();
 
     }
 

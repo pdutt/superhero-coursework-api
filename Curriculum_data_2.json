@@ -1,28 +1,28 @@
 
 {
   "CURRICULUM_ID": "12001",
-  "TRANSFER": [{
-    "LEARNING": [{
+  "TRANSFER": {
+    "LEARNING": {
       "TOPIC_1": "Pose questions about topics in history; suggest possible answers and write a thesis; locate and organize primary and secondary sources; anayze them for credibility and bias; corroborate information across the sources; use sources to support or refute the thesis; and present supported findings.",
       "TOPIC_2": "Evaluate alternative interpretations of historical events; use historical evidence to support or refure those interpretations."
-    }]
-  }],
-  "MEANING": [{
-    "UNIT_UNDERSTANDINGS": [{
+    }
+  },
+  "MEANING": {
+    "UNIT_UNDERSTANDINGS": {
       "TOPIC_1": "The origins of the system of slavery and of whote racism.",
       "TOPIC_2": "Slavery/racism were different forms of bondage, and had various rebellions",
       "TOPIC_3": "The origins of African American history were influenced by international exploration, colonization and exploitation. ",
       "TOPIC_4": "The establishment of the American Republic and continuation of slavery contradict due to foundational belief in freedom. "
-    }],
-    "ESSENTIAL_QUESTIONS": [{
+    },
+    "ESSENTIAL_QUESTIONS": {
       "TOPIC_1": "Where does African American history begin?",
       "TOPIC_2": "How do the founding ideals (freedom, equality, etc.) apply to people across time?",
       "TOPIC_3":"What was the motivation for various groups to participate in the slave trade?",
       "TOPIC_4": "What came first: slavery or racism?"
-    }]
-  }],
-  "ACQUISITION": [{
-    "KNOWLEDGE": [{
+    }
+  },
+  "ACQUISITION": {
+    "KNOWLEDGE":{
       "TOPIC_1": "Describe when and where African American history starts",
       "TOPIC_2": "Explain the motivations of European exploration",
       "TOPIC_3": "Explain the beginnings of ofrced migrations",
@@ -31,8 +31,8 @@
       "TOPIC_6": "Explain the contradictions of slavery and freedom in the making of the early American Republic.",
       "TOPIC_7": "Define and provide examples of foundational ideas of the American government which are embeddedin founding era documents: natural rights philosophy, social contract, civic virtue, popular sovereignty, constitutionalism, representative democracy, political factions, federalism and individual rights",
       "TOPIC_8": "Explain the origin and growth of the Atlantic Slave Trade,; describe its demographic, economic, and political impact on West Africa, Europe, and the Americas (North America, Caribbean, Central and South America), including the impact on enslaved Africans. "
-    }],
-    "REASONING": [{
+    },
+    "REASONING": {
       "TOPIC_1": "Analyze multiple interpretations of beginnings of African American history.",
       "TOPIC_2": "Compare and contrast the shift from chattel slavery to other forms of labor in different world regions, and its effects on world-wide migration patterns.",
       "TOPIC_3": "Analyze the consequences of the transatlantic Columbian Exchange of peoples, animals, plants and pathogens on North American societies and ecosystems.",
@@ -40,17 +40,17 @@
       "TOPIC_5": "Describe the different forms of bondage (African slavery, Chattel Slavery, Indentured Servitude)",
       "TOPIC_6": "Evaluate various forms of slave resistance and revolts during the colonial American period",
       "TOPIC_7": "Analyze contradictions between founding documents of the United States and the continuation of the instition of slavery."
-    }],
-    "SKILLS": [{
+    },
+    "SKILLS": {
       "TOPIC_1": "Use the information from a variety of sources to answer questions about the past",
       "TOPIC_2": "Compare similarities and discrepancies in multiple sources of information on the same topic or theme.",
       "TOPIC_3": "Analyze multiple sources of information and use them to create an argument about events in the past. ",
       "TOPIC_4": "Evaluate whether or not a claim is supported by evidence.",
       "TOPIC_5": "Write a logically organized argument with a claim, relevant evidence and reason."
-    }]
-  }],
-  "COMMON_MISUNDERSTANDINGS": [{
-    "MISUNDERSTANDINGS": [{
+    }
+  },
+  "COMMON_MISUNDERSTANDINGS": {
+    "MISUNDERSTANDINGS": {
       "TOPIC_1": "Slavery in Africa was the same as slavery in the colonies",
       "TOPIC_2": "African American history starts with slavery",
       "TOPIC_3": "All Black Americans that came to the Americas were slaves",
@@ -59,10 +59,10 @@
       "TOPIC_6": "Race was created as a key element in slavery in the United States",
       "TOPIC_7": "The concept of Race has always existed",
       "TOPIC_8": "There is only one form of racism"
-    }]
-  }],
-  "ESSENTIAL_NEW_VOCAB": [{
-    "VOCABULARY": [{
+    }
+  },
+  "ESSENTIAL_NEW_VOCAB": {
+    "VOCABULARY": {
       "TOPIC_1": "Racism",
       "TOPIC_2": "Colonization",
       "TOPIC_3": "West African Empires",
@@ -77,7 +77,7 @@
       "TOPIC_12": "Maroon",
       "TOPIC_13": "Griot"
 
-    }]
+    }
 
-  }]
+  }
 }
