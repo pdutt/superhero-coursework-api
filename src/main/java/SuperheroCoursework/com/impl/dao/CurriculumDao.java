@@ -22,14 +22,23 @@ public class CurriculumDao {
     public Module module;
 
    //TODO : Get json objects from Azure storageCloud
-    public void connectToStorageAccount() {
-
+    public JSONObject getCurriculumJson() throws Exception {
+        JSONParser jsonParser = new JSONParser();
+        try {
+            FileReader f = new FileReader(CurriculumConstants.jsonFilePath);
+            Object obj = jsonParser.parse(f);
+            JSONObject JsonObject = (JSONObject) obj;
+            return JsonObject;
+        }
+        catch (Exception ex) {
+            throw new Exception();
+        }
     }
 
     public Curriculum ingestJson() throws Exception {
         JSONParser jsonParser = new JSONParser();
         try {
-            FileReader f = new FileReader(CurriculumConstants.jsonFilePath);
+            FileReader f = new FileReader(CurriculumConstants.filePath);
             Object obj = jsonParser.parse(f);
 
             JSONObject JsonObject = (JSONObject) obj;
